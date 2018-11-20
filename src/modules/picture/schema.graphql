@@ -1,0 +1,25 @@
+scalar Upload
+
+type Query {
+  pictures: [Picture!]!
+}
+
+type Mutation {
+  createPicture(input: CreatePictureInput, picture: Upload): Picture!
+  deletePicture(pictureId: String!): Boolean!
+}
+
+type Subscription {
+  newPicture: Picture
+}
+
+input CreatePictureInput {
+  title: String!
+}
+
+type Picture {
+  id: ID!
+  title: String!
+  pictureUrl: String!
+  user: User!
+}
