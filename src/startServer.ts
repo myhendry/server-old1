@@ -49,6 +49,10 @@ export const startServer = async () => {
     graphqlHTTP({ schema }) as any
   );
 
+  // app.get("/", (_, res) => {
+  //   res.sendFile(__dirname + "/index.html");
+  // });
+
   // - - Cloudinary & Multer - -
   // const cloudinary = require("cloudinary");
   // cloudinary.config({
@@ -74,6 +78,13 @@ export const startServer = async () => {
   const port = process.env.PORT || 4000;
 
   await createConnection();
+
+  // const io = require("socket.io")(httpServer);
+
+  // io.on("connection", (socket: any) => {
+  //   console.log("connected", socket.id);
+  //   socket.on("update", () => io.emit("update"));
+  // });
 
   await httpServer.listen({
     port
