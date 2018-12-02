@@ -1,0 +1,16 @@
+scalar Date
+
+type Query {
+  cards: [Card!]!
+}
+
+type Mutation {
+  createCard(nickName: String!): Card!
+}
+
+type Card {
+  id: ID!
+  nickName: String!
+  createdAt: Date!
+  updatedAt: Date!
+}

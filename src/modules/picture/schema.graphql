@@ -1,12 +1,13 @@
 scalar Upload
 
 type Query {
-  pictures: [Picture!]!
+  pictures(offset: Int, limit: Int): [Picture!]!
 }
 
 type Mutation {
   createPicture(input: CreatePictureInput, picture: Upload): Picture!
   deletePicture(pictureId: String!): Boolean!
+  uploadPicture(file: Upload!): Boolean!
 }
 
 type Subscription {
