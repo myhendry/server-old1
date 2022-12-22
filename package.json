@@ -32,7 +32,7 @@
     "graphql-import": "^0.7.1",
     "graphql-upload": "^8.0.2",
     "graphql-yoga": "^1.16.7",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "merge-graphql-schemas": "^1.5.7",
     "multer": "^1.4.1",
     "pg": "^7.6.1",
